@@ -17,6 +17,14 @@ export async function getLaunchByFlightNumber(flightNumber) {
         const data = response.json();
         return data;
     } catch (error) {
-        console.erro(`erroror en la petición al launch ${flightNumber}`, error)
+        console.erro(`error en la petición al launch ${flightNumber}`, error)
+    }
+} export async function getRocketByRocketId(rocketId) {
+    try {
+        const response = await fetch(`${API_URL}/rockets/${rocketId}`);
+        const data = response.json();
+        return data;
+    } catch (error) {
+        console.erro(`error en la petición al rocket ${rocketId}`, error)
     }
 }
