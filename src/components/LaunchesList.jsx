@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Box } from "@chakra-ui/react";
 import Launch from "./Launch";
 import * as API from "../services/launches";
 
@@ -24,7 +24,9 @@ export default function LaunchesList() {
         SpaceX Launches
       </Heading>
       {launches.length === 0 ? (
-        <div>Cargando historial de lanzamientos...</div>
+        <Box bg="gray.100" p={4} m={4} borderRadius="lg">
+          <Text>Cargando historial de lanzamientos</Text>
+        </Box>
       ) : (
         <section>
           {launches.map((launch) => (
