@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Heading, Box } from "@chakra-ui/react";
+import { Heading, Box, Text } from "@chakra-ui/react";
 import Launch from "./Launch";
 import * as API from "../services/launches";
 
